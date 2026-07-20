@@ -8,7 +8,7 @@ import PortfolioCard from '@/components/PortofolioCard'
 // Data portfolio untuk masing-masing orang
 const portfolioData = {
   'john-doe': {
-    name: 'John Doe',
+    name: 'Syauqi',
     avatar: '👨‍💻',
     role: 'Frontend Developer',
     bio: 'Full-stack developer with 5+ years of experience in building web applications.',
@@ -77,7 +77,7 @@ export default function IndividualPortfolio() {
       <div className="text-center py-20">
         <h2 className="text-2xl font-bold text-gray-800">Portfolio not found</h2>
         <Link href="/portofolio" className="text-orange-500 hover:underline mt-4 inline-block">
-          ← Back to Portfolio
+          ← Kembali
         </Link>
       </div>
     )
@@ -99,7 +99,7 @@ export default function IndividualPortfolio() {
           href="/portofolio"
           className="inline-flex items-center text-orange-500 hover:text-orange-600 transition-colors mb-6"
         >
-          ← Back to Portfolio List
+          ← Kembali
         </Link>
       </motion.div>
 

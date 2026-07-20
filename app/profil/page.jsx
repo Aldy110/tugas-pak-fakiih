@@ -6,7 +6,7 @@ import ProfileCard from '@/components/ProfileCard'
 const teamMembers = [
   {
     id: 1,
-    name: 'John Doe',
+    name: 'Syauqi',
     role: 'Frontend Developer',
     bio: 'Passionate about creating beautiful and responsive web applications with modern technologies.',
     avatar: '👨‍💻',
@@ -19,7 +19,7 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: 'Jane Smith',
+    name: 'Aldiansyah',
     role: 'UI/UX Designer',
     bio: 'Creative designer with a passion for user-centered design and intuitive interfaces.',
     avatar: '👩‍🎨',
@@ -46,7 +46,7 @@ export default function ProfilePage() {
         transition={{ duration: 0.5 }}
         className="text-4xl font-bold text-gray-800 mb-2 text-center"
       >
-        Meet Our Team
+        Kenalkan Team Kami
       </motion.h1>
       <motion.p
         initial={{ opacity: 0 }}
@@ -54,7 +54,7 @@ export default function ProfilePage() {
         transition={{ duration: 0.5, delay: 0.1 }}
         className="text-gray-600 text-center mb-12"
       >
-        Get to know the creative minds behind our work
+        Lihat di balik tabir
       </motion.p>
 
       <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">

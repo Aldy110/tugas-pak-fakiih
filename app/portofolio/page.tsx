@@ -6,14 +6,14 @@ import Link from 'next/link'
 const teamMembers = [
   {
     id: 1,
-    name: 'John Doe',
+    name: 'Syauqi',
     avatar: '👨‍💻',
     role: 'Frontend Developer',
     projects: 12
   },
   {
     id: 2,
-    name: 'Jane Smith',
+    name: 'Aldiansyah',
     avatar: '👩‍🎨',
     role: 'UI/UX Designer',
     projects: 8
@@ -42,7 +42,7 @@ export default function PortfolioPage() {
         transition={{ duration: 0.5, delay: 0.1 }}
         className="text-gray-600 text-center mb-12"
       >
-        Select a team member to view their portfolio
+        Pilih kelompok kami untuk melihat portofolio
       </motion.p>
 
       <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -61,7 +61,7 @@ export default function PortfolioPage() {
                 <p className="text-orange-500 text-sm">{member.role}</p>
                 <p className="text-gray-500 text-sm mt-2">{member.projects} Projects</p>
                 <div className="mt-4 inline-block btn-orange px-6 py-2 rounded-lg text-sm font-medium hover-lift">
-                  View Portfolio
+                  Lihat Portfolio
                 </div>
               </div>
             </Link>
