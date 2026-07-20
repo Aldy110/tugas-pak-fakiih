@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 "use client";
 
 import { motion } from "framer-motion";
@@ -33,5 +34,16 @@ export default function Home() {
         </Link>
       </div>
     </motion.div>
+=======
+import About from "@/components/sections/About";
+import Hero from "@/components/sections/Hero";
+
+export default function Home() {
+  return (
+    <>
+      <Hero/>
+      <About/>
+    </>
+>>>>>>> Stashed changes
   );
 }
