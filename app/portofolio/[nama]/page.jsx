@@ -37,7 +37,7 @@ const portfolioData = {
     ]
   },
   'jane-smith': {
-    name: 'Jane Smith',
+    name: 'Aldiansyah',
     avatar: '👩‍🎨',
     role: 'UI/UX Designer',
     bio: 'Creative designer specializing in user-centered design and design systems.',

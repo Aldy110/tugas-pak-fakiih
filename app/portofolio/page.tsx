@@ -1,73 +1,45 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
-const teamMembers = [
-  {
-    id: 1,
+const portfolioData = {
+  'john-doe': {
     name: 'Syauqi',
     avatar: '👨‍💻',
     role: 'Frontend Developer',
-    projects: 12
   },
-  {
-    id: 2,
+  'jane-smith': {
     name: 'Aldiansyah',
     avatar: '👩‍🎨',
     role: 'UI/UX Designer',
-    projects: 8
   }
-]
+}
 
-export default function PortfolioPage() {
+export default function PortofolioPage() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="py-8"
-    >
-      <motion.h1
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="text-4xl font-bold text-gray-800 mb-2 text-center"
-      >
-        Portfolio
-      </motion.h1>
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.1 }}
-        className="text-gray-600 text-center mb-12"
-      >
-        Pilih kelompok kami untuk melihat portofolio
-      </motion.p>
+    <main className="container mx-auto px-4 max-w-6xl py-12">
+      <h1 className="text-3xl font-bold text-gray-800 mb-8">Portfolio</h1>
 
-      <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        {teamMembers.map((member, index) => (
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {Object.entries(portfolioData).map(([slug, person], index) => (
           <motion.div
-            key={member.id}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.4, delay: index * 0.15 }}
-            whileHover={{ scale: 1.02 }}
+            key={slug}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: index * 0.1 }}
           >
-            <Link href={`/portofolio/${member.name.toLowerCase().replace(' ', '-')}`}>
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-orange-100 card-hover text-center">
-                <div className="text-7xl mb-4">{member.avatar}</div>
-                <h3 className="text-2xl font-bold text-gray-800">{member.name}</h3>
-                <p className="text-orange-500 text-sm">{member.role}</p>
-                <p className="text-gray-500 text-sm mt-2">{member.projects} Projects</p>
-                <div className="mt-4 inline-block btn-orange px-6 py-2 rounded-lg text-sm font-medium hover-lift">
-                  Lihat Portfolio
-                </div>
-              </div>
+            <Link
+              href={`/portofolio/${slug}`}
+              className="card-hover bg-white/80 border border-orange-100 rounded-xl p-6 block text-center"
+            >
+              <div className="text-5xl mb-3">{person.avatar}</div>
+              <h3 className="font-semibold text-gray-800 text-lg">{person.name}</h3>
+              <p className="text-orange-500 text-sm">{person.role}</p>
             </Link>
           </motion.div>
         ))}
       </div>
-    </motion.div>
+    </main>
   )
 }

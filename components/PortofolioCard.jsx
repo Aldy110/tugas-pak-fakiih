@@ -1,5 +1,6 @@
 'use client'
 
+import LikeButton from './Likebutton'
 import { motion } from 'framer-motion'
 
 const PortfolioCard = ({ project }) => {
@@ -12,6 +13,9 @@ const PortfolioCard = ({ project }) => {
       <div className="text-6xl mb-4">{project.image}</div>
       <h3 className="text-xl font-bold text-gray-800 mb-2">{project.title}</h3>
       <p className="text-gray-600 text-sm mb-4">{project.description}</p>
+      <div className='mt-4 flex justify-end'>
+        <LikeButton cardId={project.id}/>
+      </div>
       <div className="flex flex-wrap gap-2">
         {project.tech.map((tech) => (
           <span
