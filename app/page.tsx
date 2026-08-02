@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import About from "@/components/sections/About";
 
 export default function Home() {
   return (
@@ -31,10 +32,6 @@ export default function Home() {
         >
           See Portfolio
         </Link>
-        <Link href='/kontak'
-              className='px-8 py-3 rounded-lg font-medium border-2 border-orange-500 text-orange-500 hover:bg-orange-50 transition-all duration-300 hover-lift'>
-                Hubungi Kami
-              </Link>
       </div>
     </motion.div>
   );
