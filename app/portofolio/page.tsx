@@ -2,19 +2,7 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-
-const portfolioData = {
-  'john-doe': {
-    name: 'Syauqi',
-    avatar: '👨‍💻',
-    role: 'Frontend Developer',
-  },
-  'jane-smith': {
-    name: 'Aldiansyah',
-    avatar: '👩‍🎨',
-    role: 'UI/UX Designer',
-  }
-}
+import { portfolioData } from './data/portfolio'
 
 export default function PortofolioPage() {
   return (
