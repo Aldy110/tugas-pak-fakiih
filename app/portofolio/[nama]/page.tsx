@@ -1,5 +1,5 @@
 import { portfolioData } from '../data/portfolio';
-import LikeButton from '../../../components/Likebutton'
+import PortfolioCard from '../../../components/PortofolioCard'
 
 export default async function PortofolioDetail({
   params,
@@ -35,8 +35,6 @@ export default async function PortofolioDetail({
             {person.name}
           </h1>
 
-          <LikeButton cardId={nama} />
-
           <p className="text-orange-500 mt-2 text-lg">
             {person.role}
           </p>
@@ -71,20 +69,12 @@ export default async function PortofolioDetail({
           </h2>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {person.projects.map((project) => (
-              <div
-                key={project.title}
-                className="bg-white rounded-2xl p-6 shadow-sm border hover:shadow-md transition"
-              >
-                <h3 className="text-xl font-bold">
-                  {project.title}
-                </h3>
-
-                <p className="text-gray-600 mt-3">
-                  {project.description}
-                </p>
-              </div>
-            ))}
+{person.projects.map((project) => (
+  <PortfolioCard
+    key={project.title}
+    project={project}
+  />
+))}
           </div>
         </section>
 
