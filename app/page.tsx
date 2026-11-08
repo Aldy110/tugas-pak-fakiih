@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import About from "@/components/sections/About";
 
 export default function Home() {
   return (
