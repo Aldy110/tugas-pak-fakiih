@@ -31,7 +31,15 @@ const PortfolioCard = ({ project }) => {
         {project.description}
       </p>
 
-      {/* Like */}
+      <a
+        href={project.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block text-orange-500 font-medium text-sm hover:text-orange-700 transition-colors"
+      >
+        View Source Code ↗
+      </a>
+
       <div className="mt-4">
         <button
           onClick={handleLike}
@@ -41,7 +49,6 @@ const PortfolioCard = ({ project }) => {
         </button>
       </div>
 
-      {/* Proyek populer */}
       {likes >= 5 && (
         <span className="block mt-3 text-sm text-orange-500 font-semibold">
           🔥 Proyek Terpopuler
